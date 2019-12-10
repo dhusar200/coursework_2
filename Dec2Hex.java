@@ -33,6 +33,6 @@ class Dec2Hex {
                 System.err.println("Argument needs to have an value.");
             }
         }
-        System.out.println("Thank you for using our application!!");
+        System.out.println("Thank you for using our application!!!");
     }
 }
