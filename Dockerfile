@@ -1,13 +1,19 @@
-# use a node base image
-FROM node:7-onbuild
+FROM node:10
 
-# set maintainer
-LABEL maintainer "dhusar200@caledonian.ac.uk"
+# Create app directory
+WORKDIR /usr/src/app
 
-# set a health check
-HEALTHCHECK --interval=5s \
-            --timeout=5s \
-            CMD curl -f http://23.96.122.79:8080 || exit 1
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
 
-# tell docker what port to expose
-EXPOSE 8080
+RUN npm install
+# If you are building your code for production
+# RUN npm ci --only=production
+
+# Bundle app source
+COPY . .
+
+EXPOSE 80 443
+CMD [ "node", "server.js" ]
