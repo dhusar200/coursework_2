@@ -1,0 +1,15 @@
+- name: Run Docker App on Node
+  hosts: azure
+  user: azureuser
+  become: yes
+
+  vars:
+    DockerID: dhusar200
+
+  tasks:
+  - name: Get Docker Image
+    command: docker pull "{{DockerID}}"/linux_tweet_app:1.0
+
+  - name: Launch Docker Container
+    command: docker container run --rm -d -p 80:80 --name linux_tweet_app "{{DockerID}}"/linux_tweet_app:1.0
+

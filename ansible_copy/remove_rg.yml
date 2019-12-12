@@ -1,0 +1,13 @@
+- name: Remove Azure Resource Group
+  hosts: localhost
+
+  vars:
+    myResourceGroup: dhusar200
+
+  tasks:
+  - name: Delete a resource group including resources it contains
+    azure_rm_resourcegroup:
+      name: "{{ myResourceGroup }}"
+      force_delete_nonempty: yes
+      state: absent
+
