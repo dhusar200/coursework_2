@@ -3,14 +3,14 @@
   connection: local
 
   vars:
-    myResourceGroup: dhusar200
+    myResourceGroup: kubernetes
     myVnet: ansible-node-vnet
     mySubnet: ansible-node-subnet
     myPublicIP: ansible-node-publicip
     myNIC: ansible-node-nic
     myNetworkSecurityGroup: ansible-node-nsg
     myVM: ansible-node
-    mySSHkey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHONDooYKYgRR1e2SX81KB6xkqRdyA7MQ/loy5hiwIYB+mWSbzyK6nF+hfceYCrYO2oo3BlyOSW3WsP89/GumFrOIXyjkqd+VEr7JPMYYfSuwmuIlt6L16DQac1O/T4xUr/g+dmOgz6a7W8RHfB/n+Z0J8f8YaFYAPDX3EyyGh0eHn2QoctDAy3OAqtaHhJHxxU8KXthTNB4t5cDa09g/H1ZqelfxmZdJRqSwdaoN58MrgoSMZDxCztZg/p7he5ffeuizrDTG6EwB/NBFRlJJZdYxV8jHw8IHaDniF6iDEurtyleJ+Ky7u+omrkLZ4gZYi1IZYCXyeyPoe3zGGr2lx dhusar200@master
+    mySSHkey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDRavh5UxNZnChM688W0iKsc5NZKUgcQnE/VDqTDDKmQNXcbxuLE0xJkzdHI/hxa3Fcg9mm0w+hsRAEbvBhUDxNtRX+vyhMBTt48VUtrxpumXXNLbrzdgjDlO7yxdjP7qM/H2TXcnT7wy8DyPZWel3Cd/1kcKiaBXirQyrJp+xccabFIWswiKKrilCRCHGB8q473H9Hojou2IrBOJzBJOlMdQ56Kf1DSgfX8Hpr+wOsMAlbcrJWwXsBI4DALB3iPuINpSQT9fnYybIIzEWS9CiBrDq64RayZqsG8QCjef1lc8GWBEzwu38AVP6TRBzBHYKq3+NSWUCderffihQxJAan username@VM
 
   tasks:
 
@@ -59,7 +59,7 @@
     azure_rm_virtualmachine:
       resource_group: "{{ myResourceGroup }}"
       name: "{{ myVM }}"
-      vm_size: Standard_DS1_v3
+      vm_size: Standard_D2_v3
       admin_username: azureuser
       ssh_password_enabled: false
       ssh_public_keys:

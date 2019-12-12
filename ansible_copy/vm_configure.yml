@@ -4,7 +4,7 @@
   become: yes
 
   vars:
-    myResourceGroup: ansible
+    myResourceGroup: kubernetes
     myVM: ansible-node
 
   tasks:

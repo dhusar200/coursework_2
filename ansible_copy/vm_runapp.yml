@@ -8,8 +8,8 @@
 
   tasks:
   - name: Get Docker Image
-    command: docker pull "{{DockerID}}"/linux_tweet_app:1.0
+    command: docker pull "{{DockerID}}"/coursework2:latest
 
   - name: Launch Docker Container
-    command: docker container run --rm -d -p 80:80 --name linux_tweet_app "{{DockerID}}"/linux_tweet_app:1.0
+    command: docker container run --rm -d -p 80:80 --name coursework2 "{{DockerID}}"/coursework2:latest
 
