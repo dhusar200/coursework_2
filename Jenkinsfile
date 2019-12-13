@@ -36,7 +36,7 @@ node {
     }
   }
   stage('Deploy new image') {
-    sshagent(['19e2344e-d347-4529-8d9b-2404452b2b14']) {
+    sshagent(['09e5d4bf-281e-48ae-8741-0495d2cf6bd3']) {
     sh 'ssh azureuser@23.102.59.66 kubectl set image deployments/coursework2 coursework2=dhusar200/coursework2:latest'
     }
   }
