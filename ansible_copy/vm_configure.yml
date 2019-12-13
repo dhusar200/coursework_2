@@ -49,5 +49,5 @@
     command: chmod +x /home/azureuser/kuber.sh
 
   - name: Run kuber installation script
-    command: . /home/azureuser/kuber.sh
+    command: sudo /home/azureuser/kuber.sh
 
