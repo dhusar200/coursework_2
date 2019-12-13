@@ -1,8 +1,0 @@
-- name: Update Kubernetes
-  hosts: azure
-  user: azureuser
-
-  tasks:  
-    - name: Create Kubernetes deployment
-      command: kubectl set image deployments/coursework2 coursework2=dhusar200/coursework2:latest
-
