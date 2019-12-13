@@ -1,6 +1,7 @@
 node {
   stage('SCM') {
-    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/dhusar200/coursework_2']]])
+    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], 
+              submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/dhusar200/coursework_2']]])
   }
   stage('SonarQube analysis') {
     def scannerHome = tool 'SonarQube';
