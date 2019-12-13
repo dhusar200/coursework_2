@@ -4,7 +4,7 @@
   become: yes
 
   vars:
-    myResourceGroup: kubernetes
+    myResourceGroup: coursework
     myVM: ansible-node
 
   tasks:
@@ -38,3 +38,16 @@
 
   - name: Run Docker installation script
     command: sudo /home/azureuser/docker_node.sh
+
+  - name: Copy kuber.sh to Node
+    copy:
+      src: ../Scripts/kuber.sh
+      dest: /home/azureuser/kuber.sh
+    when: result.stat.exists == false
+
+  - name: Set kuber.sh permissions
+    command: chmod +x /home/azureuser/kuber.sh
+
+  - name: Run kuber installation script
+    command: . /home/azureuser/kuber.sh
+

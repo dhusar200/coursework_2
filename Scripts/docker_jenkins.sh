@@ -33,8 +33,8 @@ sudo addgroup --system docker
 
 sudo adduser $USER docker
 
-sudo wget https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/azure_rm.py -P /home/
-
-sudo chmod +x azure_rm.py
-
 newgrp docker
+
+sudo wget wget https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/azure_rm.py -P /home/dhusar200/coursework_2/ansible_copy
+
+chmod +x /home/dhusar200/coursework_2/ansible_copy/azure_rm.py

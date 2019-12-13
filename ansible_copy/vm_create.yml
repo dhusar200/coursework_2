@@ -3,14 +3,14 @@
   connection: local
 
   vars:
-    myResourceGroup: kubernetes
+    myResourceGroup: coursework
     myVnet: ansible-node-vnet
     mySubnet: ansible-node-subnet
     myPublicIP: ansible-node-publicip
     myNIC: ansible-node-nic
     myNetworkSecurityGroup: ansible-node-nsg
     myVM: ansible-node
-    mySSHkey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDRavh5UxNZnChM688W0iKsc5NZKUgcQnE/VDqTDDKmQNXcbxuLE0xJkzdHI/hxa3Fcg9mm0w+hsRAEbvBhUDxNtRX+vyhMBTt48VUtrxpumXXNLbrzdgjDlO7yxdjP7qM/H2TXcnT7wy8DyPZWel3Cd/1kcKiaBXirQyrJp+xccabFIWswiKKrilCRCHGB8q473H9Hojou2IrBOJzBJOlMdQ56Kf1DSgfX8Hpr+wOsMAlbcrJWwXsBI4DALB3iPuINpSQT9fnYybIIzEWS9CiBrDq64RayZqsG8QCjef1lc8GWBEzwu38AVP6TRBzBHYKq3+NSWUCderffihQxJAan username@VM
+    mySSHkey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDnX1QfxV8DchTzHQncwUCys6/9vG5dOnZhV7K2FNiOdzBR2llSmzn/DUVBb2UrhKPUXqjMlZ7e/cWXArY3HW0p3AkE5qTJweQIUE+diLkvqoLZ/d+uM4iW2ZSPHcYVxXB0SgpKr4w5ooGhasTb5psAXNBaqEAdm7XYLfyXY+MccNV2rfuFxIEUrPQvnHfHU9Lry6Widq1gaEHHJJNOaJkolcijnVYdORPM+MVMcK0mTKir+FoEu7KbUSzV9/0N7plNM7aXMUMTqJcGxLIfPWqSlfssbTNU/PFUBk8N4A29ypZcYRE+76yoqqRDa3SMsidL2uAaFudDKKji/vhe+0cN dhusar200@VM
 
   tasks:
 
