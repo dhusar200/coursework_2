@@ -4,7 +4,7 @@ node {
   }
   stage('SonarQube analysis') {
     def scannerHome = tool 'SonarQube';
-    withSonarQubeEnv(credentialsId: '91986fa0-5bfc-409c-a7d1-b16912fecb3f') {
+    withSonarQubeEnv(credentialsId: '202b7931-c8d5-45aa-adcb-86aa8b01e132') {
         sh """cp sonar-server.properties ${scannerHome}conf/sonar-scanner.properties"""
         sh """${scannerHome}bin/sonar-scanner -D sonar.login=admin -D sonar.password=admin"""
     }
