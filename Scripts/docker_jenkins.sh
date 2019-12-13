@@ -25,6 +25,8 @@ sudo docker run -d -u root --name jenkins_container \
 -v "$HOME":/home \
 jenkinsci/blueocean
 
+sudo docker run -d --name sonarqube-container -p 9000:9000 sonarqube
+
 sudo groupadd docker
 
 sudo usermod -aG docker $USER
